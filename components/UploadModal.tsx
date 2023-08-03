@@ -80,6 +80,7 @@ const UploadModal = () => {
         setIsLoading(false);
         return toast.error("Failed image upload.");
       }
+      console.log(imageData.path);
 
       const { error: supabaseError } = await supabaseClient
         .from("songs")
